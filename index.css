@@ -1,6 +1,6 @@
 :root {
-    --card-width: 20em;
-    --card-height: 20em;
+    --card-width: 13.5em;
+    --card-height: 13.5em;
     --card-front-color: rgb(209, 209, 88);
     --card-back-color: rgb(60, 160, 160);
     --card-font-size: 40px;
@@ -9,7 +9,7 @@
 
 body {
     font-family: monospace sans-serif;
-    margin: 40px;
+    margin: 20px;
 }
 
 .flip-card {
@@ -17,7 +17,6 @@ body {
     height: var(--card-height);
     display: inline-block;
     perspective: 1000px;
-    margin: 40px 0;
 }
 
 .card {
