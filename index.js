@@ -5,3 +5,11 @@ var card = document.querySelectorAll('.card');
       card.classList.toggle('flip');
     });
   });
+
+const timeout = setTimeout(flipBack, 3000)
+
+function flipBack () {
+  [...card].forEach((card)=>{
+    card.classList.toggle('flip');
+  });
+}
