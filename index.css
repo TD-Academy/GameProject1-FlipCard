@@ -1,15 +1,23 @@
+:root {
+    --card-width: 20em;
+    --card-height: 20em;
+    --card-front-color: rgb(209, 209, 88);
+    --card-back-color: rgb(60, 160, 160);
+    --card-font-size: 40px;
+    --card-font-color: white;
+}
+
 body {
     font-family: monospace sans-serif;
     margin: 40px;
 }
 
 .flip-card {
-    width: 20em;
-    height: 20em;
+    width: var(--card-width);
+    height: var(--card-height);
     display: inline-block;
     perspective: 1000px;
     margin: 40px 0;
-    perspective: 600px;
 }
 
 .card {
@@ -26,19 +34,19 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    color: white;
+    color: var(--card-font-color);
     text-align: center;
-    font-size: 40px;
+    font-size: var(--card-font-size);
     backface-visibility: hidden;
     line-height: 240px;
 }
 
 .front {
-    background-color: rgb(209, 209, 88);
+    background-color: var(--card-front-color);
 }
 
 .back {
-    background-color: rgb(60, 160, 160);
+    background-color: var(--card-back-color);
     transform: rotateY(180deg)
 }
 
