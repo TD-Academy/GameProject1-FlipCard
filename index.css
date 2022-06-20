@@ -1,25 +1,35 @@
 :root {
     --background-color: #7CD1B8;
     --card-width: 10em;
-    --card-height: 10em;
+    --card-height: 15vh;
     --card-back-color: #FABB51;
     --card-front-color: #3E8E7E;
-    --card-font-size: 20px;
+    --card-font-size: 1.5vw;
     --card-font-color: white;
 }
 
 body {
     font-family: monospace sans-serif;
-    margin: 75px;
     background: var(--background-color);
+    margin: 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .flip-card {
     width: var(--card-width);
     height: var(--card-height);
-    display: inline-block;
     perspective: 1000px;
-    border-radius: 50%;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .card {
@@ -30,7 +40,6 @@ body {
     transform-style: preserve-3d;
     transform-origin: center right;
     transition: transform 0.5s;
-    border-radius: 50%;
 }
 
 .card_face {
@@ -41,7 +50,9 @@ body {
     text-align: center;
     font-size: var(--card-font-size);
     backface-visibility: hidden;
-    line-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .front {
