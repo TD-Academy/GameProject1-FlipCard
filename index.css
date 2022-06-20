@@ -1,15 +1,17 @@
 :root {
-    --card-width: 13.5em;
-    --card-height: 13.5em;
-    --card-front-color: rgb(209, 209, 88);
-    --card-back-color: rgb(60, 160, 160);
-    --card-font-size: 40px;
+    --background-color: #7CD1B8;
+    --card-width: 10em;
+    --card-height: 10em;
+    --card-back-color: #FABB51;
+    --card-front-color: #3E8E7E;
+    --card-font-size: 20px;
     --card-font-color: white;
 }
 
 body {
     font-family: monospace sans-serif;
-    margin: 20px;
+    margin: 75px;
+    background: var(--background-color);
 }
 
 .flip-card {
@@ -17,6 +19,7 @@ body {
     height: var(--card-height);
     display: inline-block;
     perspective: 1000px;
+    border-radius: 50%;
 }
 
 .card {
@@ -26,7 +29,8 @@ body {
     cursor: pointer;
     transform-style: preserve-3d;
     transform-origin: center right;
-    transition: transform 1s;
+    transition: transform 0.5s;
+    border-radius: 50%;
 }
 
 .card_face {
