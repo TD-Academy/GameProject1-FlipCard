@@ -8,10 +8,16 @@
     --card-font-color: white;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: monospace sans-serif;
     background: var(--background-color);
-    margin: 0;
+    height: 100vh
 }
 
 .cards {
