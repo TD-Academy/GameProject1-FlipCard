@@ -1,7 +1,20 @@
-var card = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card');
 
-[...card].forEach((card)=>{
-    card.addEventListener( 'click', function() {
-      card.classList.toggle('flip');
-    });
-  });
+var flippedCard = false;
+var firstCard, secondCard;
+
+function flip() {
+  this.classList.toggle('flip');
+
+  if (!flippedCard) {
+    // first click
+    flippedCard = true;
+    firstCard = this;
+  } else {
+    // second click
+    flippedCard = false;
+    secondCard = this;
+  }
+}
+
+cards.forEach(card => card.addEventListener('click', flip))
