@@ -1,73 +1,82 @@
 :root {
-    --background-color: #7CD1B8;
-    --card-width: 10em;
-    --card-height: 15vh;
-    --card-front-color: #FABB51;
-    --card-back-color: #3E8E7E;
-    --card-font-size: 1.5vw;
-    --card-font-color: white;
+  --background-color: #7cd1b8;
+  --card-width: 10em;
+  --card-height: 15vh;
+  --card-front-color: #fabb51;
+  --card-back-color: #3e8e7e;
+  --card-font-size: 1.5vw;
+  --card-font-color: white;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: monospace sans-serif;
-    background: var(--background-color);
-    height: 100vh;
-    display: flex;
+  font-family: monospace sans-serif;
+  background: var(--background-color);
+  height: 100vh;
+  display: flex;
 }
 
 .game {
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    perspective: 1000px;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
 }
 
 .card {
-    width: calc(25% - 10px);
-    height: calc(25% - 10px);
-    position: relative;
-    margin: 5px;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 0.5s;
-    cursor: pointer;
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 0.5s;
+  cursor: pointer;
+  color: white;
+}
+
+.card:hover {
+  z-index: 1;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .card-face {
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-    position: absolute;
-    border-radius: 5x;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  font-size: 1.5em;
 }
 
 .back {
-    background-color: var(--card-back-color);
+  background-color: var(--card-back-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .front {
-    background-color: var(--card-front-color);
-    transform: rotateY(180deg);
+  background-color: var(--card-front-color);
+  transform: rotateY(180deg);
 }
 
 .card.flip {
-    transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
 .card:active {
-    transform: scale(.97);
-    transition: transform .2s;
+  transform: scale(0.97);
+  transition: transform 1s;
 }
