@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "name": "memory-card-game",
+  "version": "1.0.0",
+  "description": "Memory card game for english words",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TD-Academy/GameProject1-FlipCard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TD-Academy/GameProject1-FlipCard/issues"
+  },
+  "homepage": "https://github.com/TD-Academy/GameProject1-FlipCard#readme"
+}
