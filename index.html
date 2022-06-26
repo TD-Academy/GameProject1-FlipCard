@@ -75,12 +75,7 @@
         </div>
     </div>
 
-    <script src="index.js"></script>
-    <script>
-        const axios = require('axios')
-        axios.get('http://localhost:3000/words').then(resp => {
-            console.log(resp.data);
-        });
-    </script>
+    <script src="index.js" type="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

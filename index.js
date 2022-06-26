@@ -1,30 +1,28 @@
-// const axios = require('axios')
-// axios.get('http://localhost:3000/words').then(resp => {
-//     console.log(resp.data);
-// });
+axios.get('http://localhost:3000/words').then(resp => {
+  console.log(resp.data);
+});
 
+const cards = document.querySelectorAll('.card');
 
-// const cards = document.querySelectorAll('.card');
+var flippedCard = false;
+var lockBoard = false;
+var firstCard, secondCard;
 
-// var flippedCard = false;
-// var lockBoard = false;
-// var firstCard, secondCard;
+function flip() {
+  this.classList.toggle('flip');
 
-// function flip() {
-//   this.classList.toggle('flip');
+  if (!flippedCard) {
+    // first click
+    flippedCard = true;
+    firstCard = this;
+  } else {
+    // second click
+    flippedCard = false;
+    secondCard = this;
+  }
+}
 
-//   if (!flippedCard) {
-//     // first click
-//     flippedCard = true;
-//     firstCard = this;
-//   } else {
-//     // second click
-//     flippedCard = false;
-//     secondCard = this;
-//   }
-// }
-
-// cards.forEach(card => card.addEventListener('click', flip))
+cards.forEach(card => card.addEventListener('click', flip))
 
 
 
