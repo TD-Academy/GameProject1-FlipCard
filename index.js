@@ -1,13 +1,5 @@
 axios.get('http://localhost:3000/words').then(resp => {
   console.log(resp.data);
-  var data = resp.data;
-  for (let key in data) {
-    if (data.hasOwnProperty(key))
-    {
-        value = data[key];
-        console.log(key, value);
-    }
-  }
 });
 
 const cards = document.querySelectorAll('.card');
